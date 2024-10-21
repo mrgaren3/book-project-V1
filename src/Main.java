@@ -1,15 +1,39 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Scanner;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+
+public class Main {
+
+    static Connection conn;
+    static Statement statement;
+    static String query ;
+    static ResultSet resultSet;
+    public static void main(String[] args) {
+        //Scanner scanner = new Scanner(System.in);
+        try {
+//            System.out.println("enter your  title and author");
+//            int id = scanner.nextInt();
+//            String title = scanner.next();
+//            String author = scanner.next();
+            query = "Insert Table book ";
+            conn= new sec().connection();
+            statement = conn.createStatement();
+            resultSet = statement.executeQuery(query);
+            resultSet.next();
+            System.out.println(resultSet.getString("title"));
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        finally{
+            try {
+                statement.close();
+                conn.close();
+            } catch (SQLException e) {
+                System.out.println(e.getMessage());
+            }
         }
     }
 }
