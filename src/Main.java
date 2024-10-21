@@ -2,6 +2,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import javax.swing.SwingUtilities;
 import java.util.Scanner;
 
 
@@ -12,6 +13,8 @@ public class Main {
     static String query ;
     static ResultSet resultSet;
     public static void main(String[] args) {
+        SwingUtilities.invokeLater(Login::new);
+
         //Scanner scanner = new Scanner(System.in);
         try {
 //            System.out.println("enter your  title and author");
