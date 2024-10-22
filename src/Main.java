@@ -27,6 +27,7 @@ public class Main {
             resultSet = statement.executeQuery(query);
             resultSet.next();
             System.out.println(resultSet.getString("title"));
+            System.out.println("hmm");
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
