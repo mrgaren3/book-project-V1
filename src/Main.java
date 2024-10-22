@@ -21,19 +21,19 @@ public class Main {
 //            int id = scanner.nextInt();
 //            String title = scanner.next();
 //            String author = scanner.next();
-            query = "Insert Table book ";
+//            query = "Insert Table book ";
             conn= new sec().connection();
-            statement = conn.createStatement();
-            resultSet = statement.executeQuery(query);
-            resultSet.next();
-            System.out.println(resultSet.getString("title"));
-            System.out.println("i added this");
+//            statement = conn.createStatement();
+//            resultSet = statement.executeQuery(query);
+//            resultSet.next();
+//            System.out.println(resultSet.getString("title"));
+            System.out.println("i didnt add this");
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
         finally{
             try {
-                statement.close();
+//                statement.close();
                 conn.close();
             } catch (SQLException e) {
                 System.out.println(e.getMessage());
