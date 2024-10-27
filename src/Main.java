@@ -13,7 +13,7 @@ public class Main {
     static String query ;
     static ResultSet resultSet;
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(Login::new);
+        new AlphaBookShopLogin();
 
         //Scanner scanner = new Scanner(System.in);
         try {
