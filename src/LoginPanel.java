@@ -1,5 +1,9 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
+import java.io.IOException;
+import java.io.InputStream;
 
 public class LoginPanel extends JPanel {
     private JTextField usernameField;
@@ -9,24 +13,26 @@ public class LoginPanel extends JPanel {
     private JButton loginButton;
 
     public LoginPanel(int frameWidth, int frameHeight) {
+
         setLayout(null);
 
-        setBackground(new Color(158, 194, 193))
+        setBackground(new Color(158, 194, 193));
+        Font font = getFont();
 
         // Dynamic font size for the title
         JLabel titleLabel = new JLabel("Alpha Shop");
-        titleLabel.setFont(new Font("Serif", Font.BOLD, (int) (frameWidth * 0.1)));
+        titleLabel.setFont(new Font("Brush Script MT", Font.BOLD, (int) (frameWidth * 0.13)));
         titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
         titleLabel.setBounds(0, 20, (int) (frameWidth*0.7), (int) (frameHeight*0.2));
         add(titleLabel);
 
         // Username text field with placeholder
-        usernameField = new JTextField("Username");
+        usernameField = new RoundJTextField(20);
         usernameField.setBounds((int) (frameWidth * 0.1), (int) (frameHeight*0.3), (int) (frameWidth * 0.6), 40);
         add(usernameField);
 
         // Password text field with placeholder
-        passwordField = new JPasswordField("Password");
+        passwordField = new RoundJPasswordField(20);
         passwordField.setBounds((int) (frameWidth * 0.1), (int) (frameHeight*0.4), (int) (frameWidth * 0.6), 40);
         add(passwordField);
 
@@ -46,6 +52,7 @@ public class LoginPanel extends JPanel {
         loginButton.setBounds((int) (frameWidth * 0.2), (int) (frameHeight*0.7), (int) (frameWidth * 0.4), 40);
         add(loginButton);
     }
+
 
     // Method to apply dark mode
     public void toggleDarkMode(boolean darkMode) {
