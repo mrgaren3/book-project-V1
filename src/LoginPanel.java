@@ -10,7 +10,8 @@ public class LoginPanel extends JPanel {
 
     public LoginPanel(int frameWidth, int frameHeight) {
         setLayout(null);
-        setBackground(new Color(158, 194, 193));
+
+        setBackground(new Color(158, 194, 193))
 
         // Dynamic font size for the title
         JLabel titleLabel = new JLabel("Alpha Shop");
