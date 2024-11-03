@@ -21,7 +21,7 @@ public class LoginPanel extends JPanel {
 
         // Dynamic font size for the title
         JLabel titleLabel = new JLabel("Alpha Shop");
-        titleLabel.setFont(new Font("Brush Script MT", Font.BOLD, (int) (frameWidth * 0.13)));
+        titleLabel.setFont(new Font("Serif", Font.BOLD, (int) (frameWidth * 0.11)));
         titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
         titleLabel.setBounds(0, 20, (int) (frameWidth*0.7), (int) (frameHeight*0.2));
         add(titleLabel);
@@ -72,7 +72,7 @@ public class LoginPanel extends JPanel {
         // Resize and reposition components based on the new frame width and height
         // Update title font size
         JLabel titleLabel = (JLabel) getComponent(0);
-        titleLabel.setFont(new Font("Serif", Font.BOLD, (int) (frameWidth * 0.1)));
+        titleLabel.setFont(new Font("Serif", Font.BOLD, (int) (frameWidth * 0.11)));
         titleLabel.setBounds(0, 20, (int) (frameWidth*0.7), (int) (frameHeight*0.2));
 
         usernameField.setBounds((int) (frameWidth * 0.075), (int) (frameHeight*0.3), (int) (frameWidth * 0.6), 40);
