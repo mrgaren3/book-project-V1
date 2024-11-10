@@ -1,9 +1,10 @@
+import veiw.*;
+
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import javax.swing.SwingUtilities;
-import java.util.Scanner;
+
 
 
 public class Main {

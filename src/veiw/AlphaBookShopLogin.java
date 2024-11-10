@@ -1,5 +1,6 @@
+package veiw;
+
 import javax.swing.*;
-import java.awt.*;
 
 public class AlphaBookShopLogin extends JFrame {
     private LoginPanel loginPanel;

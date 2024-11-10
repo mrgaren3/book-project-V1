@@ -1,11 +1,12 @@
+package veiw;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.RoundRectangle2D;
 
-public class RoundJTextField extends JTextField {
-
+public class RoundJPasswordField extends JPasswordField {
     private Shape shape;
-    public RoundJTextField(int size) {
+    public RoundJPasswordField(int size) {
         super(size);
         setOpaque(false); // As suggested by @AVD in comment.
     }
@@ -24,5 +25,4 @@ public class RoundJTextField extends JTextField {
         }
         return shape.contains(x, y);
     }
-
 }
