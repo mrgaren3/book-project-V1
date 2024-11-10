@@ -46,10 +46,10 @@ public class LoginPanel extends JPanel {
         add(stateBRadio);
 
         // Login button
-        loginButton = new JButton("Login");
-        loginButton.setBorder(new RoundedBorder(20));
-        loginButton.setForeground(Color.BLUE);
-        loginButton.setBackground(new Color(0,0,0,0));
+        loginButton = new RoundButton("Login",25);
+//        loginButton.setBorder(new RoundedBorder(20));
+//        loginButton.setForeground(Color.BLUE);
+//        loginButton.setBackground(new Color(0,0,0,0));
         loginButton.setBounds((int) (frameWidth * 0.2), (int) (frameHeight*0.7), (int) (frameWidth * 0.4), 40);
         add(loginButton);
     }
