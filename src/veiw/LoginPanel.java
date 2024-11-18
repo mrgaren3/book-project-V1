@@ -3,7 +3,7 @@ package veiw;
 import javax.swing.*;
 import java.awt.*;
 
-public class LoginPanel extends JPanel {
+public class LoginPanel extends RoundedPanel {
     private JTextField usernameField;
     private JPasswordField passwordField;
     private JRadioButton stateARadio;
