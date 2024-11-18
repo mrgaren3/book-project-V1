@@ -3,7 +3,7 @@ package veiw;
 import javax.swing.*;
 import java.awt.*;
 
-public class LoginPanel extends JPanel {
+public class LoginPanel extends RoundedPanel {
     private JTextField usernameField;
     private JPasswordField passwordField;
     private JRadioButton stateARadio;
@@ -15,24 +15,30 @@ public class LoginPanel extends JPanel {
         setLayout(null);
 
         setBackground(new Color(158, 194, 193));
-        Font font = getFont();
+//        Font font = getFont();
 
         // Dynamic font size for the title
-        JLabel titleLabel = new JLabel("Alpha Shop");
-        titleLabel.setFont(new Font("Serif", Font.BOLD, (int) (frameWidth * 0.11)));
+        JLabel titleLabel = new JLabel("  Alpha Shop");
+            titleLabel.setFont(new Font("TenaliRamakrishna", Font.BOLD, 117));
         titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
         titleLabel.setBounds(0, 20, (int) (frameWidth*0.7), (int) (frameHeight*0.2));
-        add(titleLabel);
+        this.add(titleLabel);
 
         // Username text field with placeholder
         usernameField = new RoundJTextField(100);
         usernameField.setBounds((int) (frameWidth * 0.1), (int) (frameHeight*0.3), (int) (frameWidth * 0.6), 40);
-        add(usernameField);
+        usernameField.setFont(new Font("TenaliRamakrishna", Font.ITALIC , 30));
+        usernameField.setLocation(60 , 190);
+        usernameField.setSize((int) (frameWidth * 0.6), 40);
+
+        this.add(usernameField);
 
         // Password text field with placeholder
         passwordField = new RoundJPasswordField(20);
-        passwordField.setBounds((int) (frameWidth * 0.1), (int) (frameHeight*0.4), (int) (frameWidth * 0.6), 40);
-        add(passwordField);
+//        passwordField.setBounds((int) (frameWidth * 0.1), (int) (frameHeight*0.4), (int) (frameWidth * 0.6), 40);
+        passwordField.setLocation(60 , 250);
+        passwordField.setSize((int) (frameWidth * 0.6), 40);
+        this.add(passwordField);
 
         // Radio buttons for states A and B
         ButtonGroup stateGroup = new ButtonGroup();
@@ -40,10 +46,14 @@ public class LoginPanel extends JPanel {
         stateARadio.setBounds((int) (frameWidth * 0.2), (int) (frameHeight*0.6), 100, 30);
         stateBRadio = new JRadioButton("State B");
         stateBRadio.setBounds((int) (frameWidth * 0.5), (int) (frameHeight*0.6), 100, 30);
+        stateARadio.setBackground(new Color(0,0,0,0));
+        stateBRadio.setBackground(new Color(0,0,0,0));
+        stateARadio.setForeground(new Color(0,0,0));
+        stateBRadio.setForeground(new Color(0,0,0));
         stateGroup.add(stateARadio);
         stateGroup.add(stateBRadio);
-        add(stateARadio);
-        add(stateBRadio);
+        this.add(stateARadio);
+        this.add(stateBRadio);
 
         // Login button
         loginButton = new RoundButton("Login",25);
@@ -68,18 +78,5 @@ public class LoginPanel extends JPanel {
         }
     }
 
-    // Method to dynamically resize components when window size changes
-    public void resizeComponents(int frameWidth, int frameHeight) {
-        // Resize and reposition components based on the new frame width and height
-        // Update title font size
-        JLabel titleLabel = (JLabel) getComponent(0);
-        titleLabel.setFont(new Font("Serif", Font.BOLD, (int) (frameWidth * 0.11)));
-        titleLabel.setBounds(0, 20, (int) (frameWidth*0.7), (int) (frameHeight*0.2));
 
-        usernameField.setBounds((int) (frameWidth * 0.075), (int) (frameHeight*0.3), (int) (frameWidth * 0.6), 40);
-        passwordField.setBounds((int) (frameWidth * 0.075), (int) (frameHeight*0.4), (int) (frameWidth * 0.6), 40);
-        stateARadio.setBounds((int) (frameWidth * 0.2), (int) (frameHeight*0.6), 100, 30);
-        stateBRadio.setBounds((int) (frameWidth * 0.5), (int) (frameHeight*0.6), 100, 30);
-        loginButton.setBounds((int) (frameWidth * 0.2), (int) (frameHeight*0.7), (int) (frameWidth * 0.4), 40);
-    }
 }

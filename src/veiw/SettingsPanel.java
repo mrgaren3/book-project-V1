@@ -55,7 +55,7 @@ public class SettingsPanel extends JPanel {
             mainFrame.setSize(width, height);
             loginPanel.setBounds((int) (width * 0.15), (int) (height * 0.075),
                     (int) (width * 0.7), (int) (height * 0.85));
-            loginPanel.resizeComponents(width, height);
+//            loginPanel.resizeComponents(width, height);
         }
     }
 

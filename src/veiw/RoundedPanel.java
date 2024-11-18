@@ -45,17 +45,17 @@ public class RoundedPanel extends JPanel {
         }
 
         //Draws shadow borders if any.
-        if (shady) {
-            graphics.setColor(shadowColorA);
-            graphics.fillRoundRect(
-                    shadowOffset,// X position
-                    shadowOffset,// Y position
-                    width - strokeSize - shadowOffset, // width
-                    height - strokeSize - shadowOffset, // height
-                    arcs.width, arcs.height);// arc Dimension
-        } else {
-            shadowGap = 1;
-        }
+//        if (shady) {
+//            graphics.setColor(shadowColorA);
+//            graphics.fillRoundRect(
+//                    shadowOffset,// X position
+//                    shadowOffset,// Y position
+//                    width - strokeSize - shadowOffset, // width
+//                    height - strokeSize - shadowOffset, // height
+//                    arcs.width, arcs.height);// arc Dimension
+//        } else {
+//            shadowGap = 1;
+//        }
 
         //Draws the rounded opaque panel with borders.
         graphics.setColor(getBackground());
